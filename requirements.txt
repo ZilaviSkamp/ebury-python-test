@@ -1,3 +1,4 @@
 pytest
 pytest-timeout
 futures
+PyMySQL==1.0.2
