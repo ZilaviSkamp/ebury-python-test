@@ -27,6 +27,8 @@ def generate(count_of_ids=1):
         except pymysql.IntegrityError:
             regenerate_duplicated_ids(generated_ids, count_of_ids, cursor)
             continue
+        except pymysql.OperationalError:
+            continue
 
     connection.close()
     return generated_ids.pop() if len(generated_ids) == 1 else generated_ids
