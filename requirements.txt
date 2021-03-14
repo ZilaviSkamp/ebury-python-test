@@ -1,4 +1,5 @@
 pytest
 pytest-timeout
 futures
+mock
 PyMySQL==1.0.2
